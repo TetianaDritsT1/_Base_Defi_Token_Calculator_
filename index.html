@@ -115,6 +115,7 @@
             </div>
         </div>
     </div>
+
     <script>
         function calculate() {
             const ethAmount = parseFloat(document.getElementById('ethAmount').value) || 0;
@@ -130,10 +131,10 @@
 
             const total = swapTotal + lpEarned + grantBonus;
 
-            document.getElementById('swapResult').textContent = $${swapTotal.toFixed(0)};
-            document.getElementById('lpResult').textContent = $${lpEarned.toFixed(2)};
-            document.getElementById('grantResult').textContent = $${grantBonus.toFixed(2)};
-            document.getElementById('totalValue').textContent = $${total.toFixed(2)};
+            document.getElementById('swapResult').textContent = `$${swapTotal.toFixed(0)}`;
+            document.getElementById('lpResult').textContent = `$${lpEarned.toFixed(2)}`;
+            document.getElementById('grantResult').textContent = `$${grantBonus.toFixed(2)}`;
+            document.getElementById('totalValue').textContent = `$${total.toFixed(2)}`;
         }
 
         ['ethAmount', 'ethPrice', 'lpDeposit', 'txCount'].forEach(id => document.getElementById(id).addEventListener('input', calculate));
@@ -158,4 +159,5 @@
         calculate();
     </script>
 </body>
-</html>
+                                    </html>
+    
